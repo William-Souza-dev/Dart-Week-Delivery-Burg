@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
                 return DeliveryProductTile(
                   product: ProductModel(
                       id: 0,
-                      name: 'Lanche X',
+                      name: 'Lanche Xx',
                       description:
                           'Lanche acompanha pão, hambúguer, mussarela, alface, tomate e maionese',
                       price: 15.0,
