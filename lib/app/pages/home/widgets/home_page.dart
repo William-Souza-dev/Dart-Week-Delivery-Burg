@@ -1,18 +1,27 @@
+import 'package:dw9_delivery_app/app/core/ui/helpers/loader.dart';
+import 'package:dw9_delivery_app/app/core/ui/helpers/messages.dart';
 import 'package:flutter/material.dart';
 
 import 'package:dw9_delivery_app/app/models/product_model.dart';
 
-import '../../core/ui/widgets/delivery_appbar.dart';
+import '../../../core/ui/widgets/delivery_appbar.dart';
+import 'delivery_product_tile.dart';
 
-import 'widgets/delivery_product_tile.dart';
 
-class HomePage extends StatelessWidget {
+
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
   @override
+  State<HomePage> createState() => _HomePageState();
+}
+// na class esta em statefull para poder colocar o with Loader e Messages e usar os Helpers
+
+class _HomePageState extends State<HomePage> with Loader, Messages {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: DeliveryAppbar(),
+      appBar: DeliveryAppbar(), 
       body: Column(
         children: [
           Expanded(
